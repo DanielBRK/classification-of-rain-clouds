@@ -13,6 +13,6 @@ epochs=1
 model=model_init()
 model=model_compile(model,lr)
 (model,history)=model_fit(model,train_generator,validation_generator,epochs)
-sv_model(model,filename)
+sv_model(model,history,filename)
 model=ld_model(filename)
 model.summary()

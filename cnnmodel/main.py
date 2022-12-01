@@ -97,8 +97,10 @@ def model_fit(model,train_generator,validation_generator,epochs=1):
     print("Model fitted")
     return (model,history)
 
-def sv_model(model,filename):
+def sv_model(model,history,filename):
+    np.save('my_history.npy',history.history)
     save_model(model,filename)
+    # history=np.load('my_history.npy',allow_pickle='TRUE').item()
     print("model saved")
 
 def ld_model(filename):
