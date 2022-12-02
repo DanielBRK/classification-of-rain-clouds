@@ -13,7 +13,6 @@ def get_params():
     print("Parameters loaded")
     return (train_dir,test_dir,val_dir)
 
-
 def get_data(train_dir,test_dir,val_dir,batch_size):
     train_datagen = ImageDataGenerator(rescale=1./255)
     test_datagen = ImageDataGenerator(rescale=1./255)
@@ -30,19 +29,19 @@ def get_data(train_dir,test_dir,val_dir,batch_size):
 
     train_generator = train_datagen.flow_from_directory(
         train_dir,
-        target_size=(32, 32),
+        target_size=(150, 200),
         batch_size=batch_size,
         class_mode='binary')
 
     test_generator = test_datagen.flow_from_directory(
         test_dir,
-        target_size=(32, 32),
+        target_size=(150, 200),
         batch_size=batch_size,
         class_mode='binary')
 
     validation_generator = val_datagen.flow_from_directory(
         val_dir,
-        target_size=(32, 32),
+        target_size=(150, 200),
         batch_size=batch_size,
         class_mode='binary')
 
@@ -51,7 +50,7 @@ def get_data(train_dir,test_dir,val_dir,batch_size):
 
 def model_init():
 
-    base_model = VGG16(weights = "imagenet", include_top = False, input_shape = (32, 32, 3))
+    base_model = VGG16(weights = "imagenet", include_top = False, input_shape = (150, 200, 3))
 
     x = base_model.output
 

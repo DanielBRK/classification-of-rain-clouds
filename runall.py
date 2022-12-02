@@ -5,7 +5,7 @@ get_data,model_init,model_compile,model_fit,model_compile,sv_model,ld_model
 lr=0.001
 filename="exportedmodel.h5"
 batch_size=64
-epochs=1
+epochs=10
 
 
 (tr,te,v)=get_params()
