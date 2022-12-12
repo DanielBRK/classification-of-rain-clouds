@@ -18,16 +18,16 @@ uvicorn userinterface.app:app --port 8080 --reload
 
 You need the following libraries and packages for using the code:
 
-streamlit
-PIL
-requests
-streamlit_cropper (see https://github.com/turner-anderson/streamlit-cropper thanks to the author:)
-numpy
-time
-fastapi
-uvicorn
-tensorflow & keras
-matplotlib
+- streamlit
+- PIL
+- requests
+- streamlit_cropper (see https://github.com/turner-anderson/streamlit-cropper thanks to the author:)
+- numpy
+- time
+- fastapi
+- uvicorn
+- tensorflow & keras
+- matplotlib
 
 Have fun with the app and the models :)
 
